@@ -1,0 +1,25 @@
+
+
+Insert:
+-- Inserting values into a table
+INSERT INTO Employees (ID, Name, Age) VALUES (1, 'John Doe', 30);
+-- Handling missing values (NULL)
+INSERT INTO Employees (ID, Name) VALUES (2, 'Jane Doe');
+
+Update:
+-- Updating a specific row
+UPDATE Employees SET Age = 31 WHERE ID = 1;
+-- Updating multiple rows
+UPDATE Employees SET Age = Age + 1 WHERE Age > 25;
+
+Delete:
+-- Deleting a specific row
+DELETE FROM Employees WHERE ID = 1;
+-- Use WHERE to avoid deleting all rows
+DELETE FROM Employees WHERE Age < 18;
+
+Null values:
+-- Checking for NULL values
+SELECT * FROM Employees WHERE Age IS NULL;
+-- Inserting with default (if column has a default constraint)
+INSERT INTO Employees (ID, Name) VALUES (3, 'Sam');
